@@ -1,0 +1,26 @@
+body {
+  background-color: #539dc7;
+}
+header {
+  background-color: #126f96;
+}
+.list-unstyled {
+  list-style-type: none;
+  list-style-position: outside;
+  padding-left: 0px;
+}
+.list-unstyled li {
+  box-shadow: 0 0 30px 0px #539dc7 inset, 0 0 20px 0px #126f96;
+  background-color: #87cefa;
+}
+.checked {
+  text-decoration: line-through;
+  color: slategrey;
+}
+.list-unstyled .checked {
+  background-color: #539dc7;
+}
+
+.highlight{
+  background-color: lime;
+}

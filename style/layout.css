@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  margin-top: 0;
+  margin-bottom: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.container {
+  display: flex;
+  width: 65%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.justify-content-center {
+  justify-content: center;
+  text-align: center;
+}
+.column {
+  width: 100%;
+}
+.list-unstyled li {
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+.list-unstyled{
+  padding: 5px;
+}
+p{
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+h3{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}

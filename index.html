@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Baguette :: todo</title>
+    <link rel="stylesheet" type="text/css" href="style/todo.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header class="justify-content-center">
+      <h1>Errand list</h1>
+    </header>
+    
+    <div class="container">
+      <div class="justify-content-center column">
+        <form action="You Should Not Be Here!" id="card-form">
+          <input
+          type="text"
+            class=""
+            placeholder="Title"
+            id="card-title"
+            />
+
+          <input
+          type="text"
+            class=""
+            placeholder="optional description"
+            id="card-description"
+            />
+          </form>
+          
+          <button form="card-form">Add</button>
+          
+          <h3 class="card-pending">What's missing:</h3>
+          <ul class="list-unstyled" id="pending-list"></ul>
+        </div>
+      </div>
+      
+      <footer>
+        Single click checks the item <br />Double click gets rid of it
+      </footer>
+      <script type="module" src="js/todo.js"></script>
+  </body>
+  </html>
+  
