@@ -24,3 +24,12 @@ header {
 .highlight{
   background-color: lime;
 }
+h3{
+  background-color: pink
+}
+p{
+  background-color: limegreen
+}
+li{
+  background-color: violet
+}
