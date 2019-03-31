@@ -31,3 +31,8 @@ It's a work in progress. Bear with me.
 ## Additional
 ### Features for future consideration
 * Electron - Export app to desktop
+
+## Misc
+
+Runs on localhost. 
+Recommended: Python simple server

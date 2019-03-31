@@ -4,8 +4,8 @@
   "description": "Classic todo app with a JS OOP twist.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./js/*.js",
-    "lint-fix": "eslint ./js/*.js --fix"
+    "lint": "eslint ./js/*.mjs",
+    "lint-fix": "eslint ./js/*.mjs --fix"
   },
   "repository": {
     "type": "git",

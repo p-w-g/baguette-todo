@@ -1,4 +1,4 @@
-import Task from './Task.js';
+import Task from './Task.mjs';
 
 class List {
     constructor() {
@@ -13,7 +13,7 @@ class List {
     renderList() {
         const itemElements = document.createElement('ul');
         itemElements.className = 'list-unstyled';
-    
+
         this.items.forEach((item) => {
             const listCard = document.createElement('li');
             const cardTitle = document.createElement('h3');
@@ -24,7 +24,7 @@ class List {
             listCard.appendChild(cardDescription);
             itemElements.appendChild(listCard);
         });
-    
+
         document.querySelector('#pending-list').innerHTML = '';
         document.querySelector('#pending-list').appendChild(itemElements);
     }
