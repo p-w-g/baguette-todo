@@ -1,16 +1,16 @@
-
 class Task {
-    constructor(title, description) {
-        this.state = {
-            title,
-            description,
-            done: false,
-        };
-    }
+  constructor(title, description, id) {
+    this.state = {
+      title,
+      description,
+      id,
+      done: false,
+    };
+  }
 
-    toggleDone() {
-        this.state.done = true;
-    }
+  toggleDone() {
+    this.state.done = true;
+  }
 }
 
 export default Task;

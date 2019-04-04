@@ -1,32 +1,48 @@
 import List from './List.mjs';
 
 const footer = document.querySelector('footer');
+let ID = 0;
 
 footer.addEventListener('dblclick', () => {
-    footer.parentNode.removeChild(footer);
+  footer.parentNode.removeChild(footer);
 });
 
 const list = new List();
-let ID = 0;
 document.querySelector('#card-form').addEventListener('submit', (event) => {
-    event.preventDefault();
-    if (event.target[0].value === '') {
-        return alert('Please add at least a Title');
-    }
-    list.addItem(event.target[0].value, event.target[1].value);
+  event.preventDefault();
 
-    document.querySelector('#card-title').value = '';
-    document.querySelector('#card-description').value = '';
-    list.items[ID].state.ID = ID;
+  if (event.target[0].value === '') {
+    return alert('Please add at least a Title');
+  }
 
-    console.log('curr added item', list.items[ID].state);
-    console.log('curr added items ID', list.items[ID].state.ID);
+  list.addItem(event.target[0].value, event.target[1].value, ID);
 
-    ID += 1;
+  document.querySelector('#card-title').value = '';
+  document.querySelector('#card-description').value = '';
+
+  // list.items[list.items.length].state.ID = ID;
+  // console.log('curr added item', list.items[ID].state);
+  // console.log('curr added items ID', list.items[ID].state.ID);
+  console.log('all items ', list.items);
+  // document.querySelector('#pending-list li:last-child').setAttribute('id', ID);
+  console.log(
+    'id of last LI',
+    document.querySelector('#pending-list li:last-child').id,
+  );
+
+  ID += 1;
 });
 
 document.querySelector('#pending-list').addEventListener('click', (event) => {
-    console.log('all items curr', list.items);
-    console.log('Clicked element: ', event.target);
-    console.log('Object ', list.items[event.target.ID]);
+  if (event.target.nodeName === 'LI') {
+    console.log('Clicked element: LI', event.target.id);
+    return list.removeItem(parseInt(event.target.id));
+  }
+  console.log('Clicked element: NOTLI', event.target.parentNode.id);
+  return list.removeItem(parseInt(event.target.parentNode.id));
+  // console.log('Object ', list.items[event.target.ID]);
 });
+
+// forloop array - mismatching index and ID
+// on click and on double click events
+// set done as condition to remove
