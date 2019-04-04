@@ -1,0 +1,28 @@
+{
+  "name": "baguette-todo",
+  "version": "1.0.0",
+  "description": "Classic todo app with a JS OOP twist.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./js/*.mjs",
+    "lint-fix": "eslint ./js/*.mjs --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sltPrz/baguette-todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sltPrz/baguette-todo/issues"
+  },
+  "homepage": "https://github.com/sltPrz/baguette-todo#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
