@@ -8,6 +8,7 @@ footer.addEventListener('dblclick', () => {
 });
 
 const list = new List();
+
 document.querySelector('#card-form').addEventListener('submit', (event) => {
   event.preventDefault();
 

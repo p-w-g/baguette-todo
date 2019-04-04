@@ -10,6 +10,19 @@ The purpose of this app is having a sandbox project to learn JS OOP programming.
 
 It's planned to be a part of another project in future. It holds tasks and descriptions.
 
+## Disclaimer
+
+Runs on localhost.
+Recommended: 
+>python3 -m http.server 
+
+or if you have only installed python3 locally then
+>python -m http.server 
+
+### Known issues:
+
+- running on Python 2 SimpleHTTPServer requires renaming js files' extensions from _.mjs to _.js and updating imports in each each script file
+
 ## Done
 
 - [done] Add task card feature
@@ -25,6 +38,7 @@ It's a work in progress. Bear with me.
 
 ### Core
 
+- [] Edit feature
 - [] Mobile view
 - [] Persistence and / or Store state locally
 
@@ -38,16 +52,5 @@ It's a work in progress. Bear with me.
 
 ### Features for future consideration
 
-- Electron - Export app to desktop
+- [Electron](https://electronjs.org/) / [Proton](https://proton-native.js.org/) - Export app to desktop
 
-## Misc
-
-Runs on localhost.
-Recommended: 
->python3 -m http.server 
-
-because of modular JS
-
-### Known issues:
-
-- running on Python 2 SimpleHTTPServer requires renaming js files' extensions from _.mjs to _.js and updating imports in each each script file
