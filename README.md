@@ -32,6 +32,7 @@ It's a work in progress. Bear with me.
 
 - [] CSS using SMACSS
 - [] Clean naming convention
+- [] Refactor helping functions in list class
 
 ## Additional
 
@@ -42,7 +43,10 @@ It's a work in progress. Bear with me.
 ## Misc
 
 Runs on localhost.
-Recommended: Python3 -m http.server because of modular JS
+Recommended: 
+>python3 -m http.server 
+
+because of modular JS
 
 ### Known issues:
 

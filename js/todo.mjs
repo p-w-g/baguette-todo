@@ -11,11 +11,13 @@ const list = new List();
 document.querySelector('#card-form').addEventListener('submit', (event) => {
   event.preventDefault();
 
-  if (event.target[0].value === '') {
+  const title = event.target[0].value;
+  if (title === '') {
     return alert('Please add at least a Title');
   }
 
-  list.addItem(event.target[0].value, event.target[1].value, ID);
+  const description = event.target[1].value;
+  list.addItem(title, description, ID);
 
   document.querySelector('#card-title').value = '';
   document.querySelector('#card-description').value = '';
@@ -30,11 +32,12 @@ document.querySelector('#pending-list').addEventListener('click', (event) => {
   return list.toggleDone(parseInt(event.target.parentNode.id));
 });
 
+
 document.querySelector('#pending-list').addEventListener('dblclick', (event) => {
   if (event.target.nodeName === 'LI') {
     list.removeItem(parseInt(event.target.id));
-    return list.renderList();
+  } else {
+    list.removeItem(parseInt(event.target.parentNode.id));
   }
-  list.removeItem(parseInt(event.target.parentNode.id));
   return list.renderList();
 });
