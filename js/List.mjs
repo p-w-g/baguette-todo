@@ -7,23 +7,30 @@ class List {
 
   addItem(title, description, id) {
     this.items.push(new Task(title, description, id));
-    // console.log('items array', this.items);
-
     this.renderList();
   }
 
   removeItem(ID) {
-    // instead for loop the array, match the ID's and filter out matches
-    // this.items.splice(ID, 1);
     for (let i = 0; i < this.items.length; i++) {
       if (this.items[i].state.id === ID) {
-        this.items.splice(i, 1);
-        // console.log('hello from for loop: ', this.items[i].state.id);
+        return this.items.splice(i, 1);
       }
     }
     this.renderList();
+  }
 
-    console.log('input ID: ', ID);
+  toggleDone(ID) {
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i].state.id === ID && this.items[i].state.done === false) {
+        console.log(this.items[i].state.done);
+
+        return (this.items[i].state.done = true);
+      }
+      if (this.items[i].state.id === ID && this.items[i].state.done === true) {
+        console.log(this.items[i].state.done);
+        return (this.items[i].state.done = false);
+      }
+    }
   }
 
   renderList() {

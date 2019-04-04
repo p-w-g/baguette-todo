@@ -19,30 +19,25 @@ document.querySelector('#card-form').addEventListener('submit', (event) => {
 
   document.querySelector('#card-title').value = '';
   document.querySelector('#card-description').value = '';
-
-  // list.items[list.items.length].state.ID = ID;
-  // console.log('curr added item', list.items[ID].state);
-  // console.log('curr added items ID', list.items[ID].state.ID);
-  console.log('all items ', list.items);
-  // document.querySelector('#pending-list li:last-child').setAttribute('id', ID);
-  console.log(
-    'id of last LI',
-    document.querySelector('#pending-list li:last-child').id,
-  );
+  // console.log('all items ', list.items);
+  // console.log(
+  //   'id of last LI',
+  //   document.querySelector('#pending-list li:last-child').id,
+  // );
 
   ID += 1;
 });
 
 document.querySelector('#pending-list').addEventListener('click', (event) => {
   if (event.target.nodeName === 'LI') {
-    console.log('Clicked element: LI', event.target.id);
-    return list.removeItem(parseInt(event.target.id));
+    return list.toggleDone(parseInt(event.target.id));
   }
-  console.log('Clicked element: NOTLI', event.target.parentNode.id);
-  return list.removeItem(parseInt(event.target.parentNode.id));
-  // console.log('Object ', list.items[event.target.ID]);
+  return list.toggleDone(parseInt(event.target.parentNode.id));
 });
 
-// forloop array - mismatching index and ID
-// on click and on double click events
-// set done as condition to remove
+document.querySelector('#pending-list').addEventListener('dblclick', (event) => {
+  if (event.target.nodeName === 'LI') {
+    return list.removeItem(parseInt(event.target.id));
+  }
+  return list.removeItem(parseInt(event.target.parentNode.id));
+});

@@ -7,10 +7,6 @@ class Task {
       done: false,
     };
   }
-
-  toggleDone() {
-    this.state.done = true;
-  }
 }
 
 export default Task;
