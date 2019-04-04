@@ -22,13 +22,14 @@ class List {
   toggleDone(ID) {
     for (let i = 0; i < this.items.length; i++) {
       if (this.items[i].state.id === ID && this.items[i].state.done === false) {
-        console.log(this.items[i].state.done);
-
-        return (this.items[i].state.done = true);
+        document.getElementById(ID).classList.toggle('checked');
+        this.items[i].state.done = true;
+        return;
       }
       if (this.items[i].state.id === ID && this.items[i].state.done === true) {
-        console.log(this.items[i].state.done);
-        return (this.items[i].state.done = false);
+        document.getElementById(ID).classList.toggle('checked');
+        this.items[i].state.done = false;
+        return;
       }
     }
   }
@@ -44,6 +45,9 @@ class List {
       cardTitle.innerHTML = item.state.title;
       cardDescription.innerHTML = item.state.description;
       listCard.setAttribute('id', item.state.id);
+      if (item.state.done === true) {
+        listCard.classList.add('checked');
+      }
       listCard.appendChild(cardTitle);
       listCard.appendChild(cardDescription);
       itemElements.appendChild(listCard);

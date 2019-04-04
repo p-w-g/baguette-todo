@@ -19,11 +19,6 @@ document.querySelector('#card-form').addEventListener('submit', (event) => {
 
   document.querySelector('#card-title').value = '';
   document.querySelector('#card-description').value = '';
-  // console.log('all items ', list.items);
-  // console.log(
-  //   'id of last LI',
-  //   document.querySelector('#pending-list li:last-child').id,
-  // );
 
   ID += 1;
 });
@@ -37,7 +32,9 @@ document.querySelector('#pending-list').addEventListener('click', (event) => {
 
 document.querySelector('#pending-list').addEventListener('dblclick', (event) => {
   if (event.target.nodeName === 'LI') {
-    return list.removeItem(parseInt(event.target.id));
+    list.removeItem(parseInt(event.target.id));
+    return list.renderList();
   }
-  return list.removeItem(parseInt(event.target.parentNode.id));
+  list.removeItem(parseInt(event.target.parentNode.id));
+  return list.renderList();
 });
