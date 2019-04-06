@@ -16,12 +16,16 @@ Runs on localhost.
 Recommended: 
 >python3 -m http.server 
 
-or if you have only installed python3 locally then
+or
 >python -m http.server 
+
+depending on local install of Python
 
 ### Known issues:
 
-- running on Python 2 SimpleHTTPServer requires renaming js files' extensions from _.mjs to _.js and updating imports in each each script file
+- running on Python 2 SimpleHTTPServer requires renaming js files' extensions from _.mjs to _.js and updating imports in each each script file.
+- large size of desktop builds due to electron and inbuilt chromium.
+
 
 ## Done
 
@@ -30,8 +34,8 @@ or if you have only installed python3 locally then
 - [done] Toggle task card "done"
 - [done] Class holding tasks
 - [done] event listeners / handlers
-- [ish] Layout and CSS
-
+- [ish]  Layout and CSS
+- [ish]  Desktop release builds with [Electron](https://electronjs.org/) and Electron Packager
 ## Missing features
 
 It's a work in progress. Bear with me.
@@ -47,10 +51,4 @@ It's a work in progress. Bear with me.
 - [] CSS using SMACSS
 - [] Clean naming convention
 - [] Refactor helping functions in list class
-
-## Additional
-
-### Features for future consideration
-
-- [Electron](https://electronjs.org/) / [Proton](https://proton-native.js.org/) - Export app to desktop
 
