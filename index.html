@@ -6,6 +6,8 @@
     <title>Le Baguette :: todo</title>
     <link rel="stylesheet" type="text/css" href="style/todo.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <base href="app://./" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' app:; object-src 'self' app:;">
   </head>
   <body>
     <header class="justify-content-center">
@@ -17,30 +19,32 @@
         <form action="You Should Not Be Here!" id="card-form">
           <input
           type="text"
-            class=""
-            placeholder="Title"
-            id="card-title"
-            />
-
+          class=""
+          placeholder="Title"
+          id="card-title"
+          />
+          
           <input
           type="text"
-            class=""
-            placeholder="optional description"
-            id="card-description"
-            />
-          </form>
-          
-          <button form="card-form">Add</button>
-          
-          <h3 class="card-pending">What's missing:</h3>
-          <ul class="list-unstyled" id="pending-list"></ul>
-        </div>
+          class=""
+          placeholder="optional description"
+          id="card-description"
+          />
+        </form>
+        
+        <button form="card-form">Add</button>
+        
+        <h3 class="card-pending">What's missing:</h3>
+        <ul class="list-unstyled" id="pending-list"></ul>
       </div>
-      
-      <footer>
-        Single click checks the item <br />Double click gets rid of it
-      </footer>
-      <script type="module" src="./js/todo.mjs"></script>
+    </div>
+    
+    <footer>
+      Single click checks the item <br />Double click gets rid of it
+    </footer>
+    <!-- <script type="module" src="./module.js"></script> -->
+    <script type="module" src="./js/todo.mjs"></script>
+    <!-- <script type="module" src="app:test-module.mjs"></script> -->
   </body>
   </html>
   
