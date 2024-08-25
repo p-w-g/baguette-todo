@@ -14,17 +14,22 @@ It's planned to be a part of another project in future. It holds tasks and descr
 
 Runs on localhost.
 Recommended: 
->python3 -m http.server 
+~~python3 -m http.server~~ 
 
-or
->python -m http.server 
+~~or~~
+~~python -m http.server~~ 
 
-depending on local install of Python
+~~depending on local install of Python~~
+
+Just blast `npm i` to install locally serve, and then `npm run serve`
+app is served on `localhost:3000` 
 
 ### Known issues:
 
-- running on Python 2 SimpleHTTPServer requires renaming js files' extensions from _.mjs to _.js and updating imports in each each script file.
-- large size of desktop builds due to electron and inbuilt chromium.
+- ~~running on Python 2 SimpleHTTPServer requires renaming js files' extensions from _.mjs to _.js and updating imports in each each script file.~~
+- ~~large size of desktop builds due to electron and inbuilt chromium.~~
+
+got rid of all unnecessary packages. runs on `serve`. 
 
 
 ## Done
@@ -36,9 +41,9 @@ depending on local install of Python
 - [done] event listeners / handlers
 - [ish]  Layout and CSS
 - [ish]  Desktop release builds with [Electron](https://electronjs.org/) and Electron Packager
-## Missing features
+## ~~Missing features~~ State
 
-It's a work in progress. Bear with me.
+~~It's a work in progress. Bear with me.~~  Project is abandoned.
 
 ### Core
 
